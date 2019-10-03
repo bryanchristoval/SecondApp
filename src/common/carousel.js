@@ -26,7 +26,7 @@ class Carousel extends Component {
 const styles = StyleSheet.create({
     
     Card1:{
-        height: 80,
+        height:80, 
         width: 335,
         backgroundColor:"#D44624",
         borderRadius: 4,
@@ -50,6 +50,8 @@ const styles = StyleSheet.create({
         paddingLeft: 140,
         paddingBottom: 6,
         fontSize: 34,
+        fontFamily: 'Spectral-Bold'
+
     },
 
 

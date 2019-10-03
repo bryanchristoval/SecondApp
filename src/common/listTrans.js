@@ -12,7 +12,7 @@ const ListTrans = (props) =>  {
         colorString2 = '#75D424'
     }
         return (
-            <View>
+            <View style={{paddingLeft: 20}}>
                 <View style={styles.listView}>
                     <View style={styles.imageStyle}>
                         <Image source={props.image}/>
@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         borderBottomWidth: 0.5,
+        borderColor: '#DCDCDC'
 
     },
     imageStyle:{

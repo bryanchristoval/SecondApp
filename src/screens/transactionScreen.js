@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container } from 'native-base'
-import { View, Text, StyleSheet, TextInput} from 'react-native'
+import { View, Text, StyleSheet, TextInput, ScrollView} from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign'
 import { Actions } from 'react-native-router-flux'
 import AppHeader from '../common/header'
@@ -17,65 +17,69 @@ class TransPage extends Component {
         return (
             <Container>
                 <AppHeader
-                    leftclick = {() => Actions.pop()}
+                    leftclick = {() => this.props.navigation.pop()}
                     leftbutton  = {leftArrow}
                 />
+                
                 <View>
                     <Text style={styles.titleText}>
                         Transaction
                     </Text>
                 </View>
-                <View style={styles.searchBg}>
-                    <Icon name='search1' style={styles.iconStyle}/>
-                    <TextInput style={styles.searchTextInput} placeholder='Search'/>
-                </View>
-                <View style={styles.dateView}>
-                    <Text style={styles.dateText}>TODAY, 10 JAN 2018</Text>
-                </View>
+                <ScrollView>
+                    <View style={styles.searchBg}>
+                        <Icon name='search1' style={styles.iconStyle}/>
+                        <TextInput style={styles.searchTextInput} placeholder='Search'/>
+                    </View>
+                    <View style={styles.dateView}>
+                        <Text style={styles.dateText}>TODAY, 10 JAN 2018</Text>
+                    </View>
+                    
+                    <ListTrans
+                        categories = 'Food & Drink'
+                        amount = '300.000'
+                        detail = 'Groceries'
+                        minplus = '-'
+                        image = {beveragesIcon}
+                        showColor={true}
+                    />
+                    <ListTrans
+                        categories = 'Transport'
+                        amount = '300.000'
+                        detail = 'Uber'
+                        minplus = '-'
+                        image = {transportIcon}
+                        showColor={true}
+                    />
+                    <ListTrans
+                        categories = 'Salary'
+                        amount = '5.000.000'
+                        detail = 'Antikode'
+                        minplus = '+'
+                        image = {salaryIcon}
+                        showColor={false}
+                    />
+                    <View style={styles.dateView2}>
+                        <Text style={styles.dateText}>SAT, 9 JAN 2018</Text>
+                    </View>
+                    <ListTrans
+                        categories = 'Food & Drinks'
+                        amount = '300.000'
+                        detail = 'Groceries'
+                        minplus = '-'
+                        image = {beveragesIcon}
+                        showColor={true}
+                    />
+                    <ListTrans
+                        categories = 'Transport'
+                        amount = '300.000'
+                        detail = 'Uber'
+                        minplus = '-'
+                        image = {transportIcon}
+                        showColor={true}
+                    />
+                </ScrollView>
                 
-                <ListTrans
-                    categories = 'Food & Drink'
-                    amount = '300.000'
-                    detail = 'Groceries'
-                    minplus = '-'
-                    image = {beveragesIcon}
-                    showColor={true}
-                />
-                <ListTrans
-                    categories = 'Transport'
-                    amount = '300.000'
-                    detail = 'Uber'
-                    minplus = '-'
-                    image = {transportIcon}
-                    showColor={true}
-                />
-                <ListTrans
-                    categories = 'Salary'
-                    amount = '5.000.000'
-                    detail = 'Antikode'
-                    minplus = '+'
-                    image = {salaryIcon}
-                    showColor={false}
-                />
-                <View style={styles.dateView2}>
-                    <Text style={styles.dateText}>SAT, 9 JAN 2018</Text>
-                </View>
-                <ListTrans
-                    categories = 'Food & Drinks'
-                    amount = '300.000'
-                    detail = 'Groceries'
-                    minplus = '-'
-                    image = {beveragesIcon}
-                    showColor={true}
-                />
-                <ListTrans
-                    categories = 'Transport'
-                    amount = '300.000'
-                    detail = 'Uber'
-                    minplus = '-'
-                    image = {transportIcon}
-                    showColor={true}
-                />
                 
                 
                 
