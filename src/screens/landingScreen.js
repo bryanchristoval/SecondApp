@@ -1,12 +1,18 @@
 import React, { Component } from 'react'
+import { Container } from 'native-base'
 import { View, Text, StyleSheet } from 'react-native'
+
 import HomeCard from '../common/homeCard';
 import Carousel from '../common/carousel';
+import AppHeader from '../common/header'
+
 
 class LandingPage extends Component {
     render () {
         return (
-            <View style={styles.container}>
+            <Container>
+            
+                <View style={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.text1}>JANUARY 2018</Text>
                 </View>
@@ -21,7 +27,9 @@ class LandingPage extends Component {
                         leftText= 'TODAY'
                         amount='0'
                         showRed={true}
+                        click1 = {() => this.props.navigation.navigate("AddExpense")}
                     />
+                    
                     <HomeCard
                         leftText= 'SAT'
                         amount='300.000'
@@ -60,8 +68,8 @@ class LandingPage extends Component {
                     />
                 
                 </View>
-                
-            </View>
+                </View>
+            </Container>
         )
     }
 }

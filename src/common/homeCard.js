@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
 import { Card } from 'native-base'
+import { Actions } from 'react-native-router-flux'
 
 const HomeCard = (props) => {
     if (props.showRed){
@@ -17,22 +18,25 @@ const HomeCard = (props) => {
 
     return(
         <View>
-            
-            <View key='bottomview'>
-                <Card style={styles.cardBottom}>
-                    <View style={styles.viewBottom}>
-                        <Text style={{color: colorString}}>{props.leftText}</Text>
-                        <View style={styles.currencyView}>
+            <TouchableOpacity  button onPress = {props.click1}>
+                <View key='bottomview'>
+                    <Card style={styles.cardBottom}>
+                        <View style={styles.viewBottom}>
+                            <Text style={{color: colorString}}>{props.leftText}</Text>
                             <View style={styles.currencyView}>
-                                <Text style={{color: colorString2}}>{props.minplus}</Text>
-                                <Text style={styles.currencyText}>Rp</Text>
-                                <Text style={{fontSize:32, color:'#001118', fontFamily:'Spectral-Bold'}}>{props.amount}</Text>
+                                <View style={styles.currencyView}>
+                                    <Text style={{color: colorString2}}>{props.minplus}</Text>
+                                    <Text style={styles.currencyText}>Rp</Text>
+                                    <Text style={{fontSize:32, color:'#001118', fontFamily:'Spectral-Bold'}}>{props.amount}</Text>
+                                </View>
+                                
                             </View>
-                            
                         </View>
-                    </View>
-                </Card>
-            </View>
+                    </Card>
+                </View>
+
+            </TouchableOpacity>
+            
         </View>
 
 
