@@ -32,7 +32,7 @@ export default StyleSheet.create({
         flex: 1,
         backgroundColor: colors.lightGrey,
         paddingBottom: 34,
-        flexDirection:'row'
+        flexDirection:'row',
     },
     
     header:{
@@ -92,12 +92,13 @@ export default StyleSheet.create({
     item: {
         color: colors.black,
         fontSize: 26,
+        fontFamily:'ProximaNova-Semibold'
     },
     
     
       row: {
         height: 200,
-        flex:1
+        flex:1,
     },
 
     titleText:{

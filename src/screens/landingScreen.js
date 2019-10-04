@@ -28,7 +28,7 @@ class LandingPage extends Component {
                     <View>
                         <Carousel/>
                     </View>
-                    <View>
+                    <View style={{paddingTop: 16}}>
                         <HomeCard
                             leftText= 'TODAY'
                             amount='0'
