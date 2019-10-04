@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text,TouchableOpacity } from 'react-native';
 import { Card } from 'native-base'
-import { Actions } from 'react-native-router-flux'
+import styles from '../styles/index'
 
 const HomeCard = (props) => {
     if (props.showRed){
@@ -42,43 +42,5 @@ const HomeCard = (props) => {
 
     )
 }
-const styles = StyleSheet.create({
-
-    Card2:{
-        height: 80,
-        width: 335,
-        backgroundColor:"#75D424",
-        borderRadius: 4,
-    },
-
-    viewBottom:{
-        flex: 1,
-        justifyContent: 'space-between',
-        flexDirection: 'row',
-        alignContent: 'center',
-        alignItems: 'center',
-        paddingLeft:16,
-        paddingRight: 15.8,
-        
-    },
-
-    currencyView:{
-        flexDirection:'row',
-        alignItems: 'flex-end',
-        justifyContent: 'space-around'
-    },
-
-    currencyText:{
-        marginLeft: 3,
-        marginRight: 3,
-        color:'#8E8E93'
-    },
-    cardBottom:{
-        height: 64,
-        backgroundColor:"#FFFFFF",
-        borderRadius: 4,
-
-    }
-});
 
 export default HomeCard;

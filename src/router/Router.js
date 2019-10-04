@@ -4,6 +4,7 @@ import { createAppContainer} from "react-navigation";
 import { createStackNavigator } from 'react-navigation-stack'
 import { Container } from 'native-base'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
+
 import LandingPage from '../screens/landingScreen'
 import TransPage from '../screens/transactionScreen'
 import SettingPage from '../screens/settingScreen'

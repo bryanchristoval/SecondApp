@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
+
+import styles from '../../styles/index'
 
 class CalcButton extends React.Component {
   render() {
@@ -7,7 +9,7 @@ class CalcButton extends React.Component {
 
     return (
       <TouchableOpacity
-        style={styles.container}
+        style={styles.calcContainer}
         onPress={() => handleButtonPress(operator)}
       >
         <Text style={styles.item}>
@@ -17,20 +19,5 @@ class CalcButton extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    margin: 1,
-  },
-
-  item: {
-    color: 'black',
-    fontSize: 26,
-  },
-});
 
 export default CalcButton;

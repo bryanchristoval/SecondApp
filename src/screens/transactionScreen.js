@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { Container } from 'native-base'
-import { View, Text, StyleSheet, TextInput, ScrollView} from 'react-native'
+import { View, Text, TextInput, ScrollView} from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign'
-import { Actions } from 'react-native-router-flux'
 import AppHeader from '../common/header'
+
 import ListTrans from '../common/listTrans'
+
+import styles from '../styles/index'
+
 
 const beveragesIcon = require('../assets/icon/ic_food_red.png')
 const transportIcon = require('../assets/icon/ic_transport_red.png')
@@ -17,7 +20,7 @@ class TransPage extends Component {
         return (
             <Container>
                 <AppHeader
-                    leftclick = {() => this.props.navigation.pop()}
+                    leftclick = {() => this.props.navigation.popToTop()}
                     leftbutton  = {leftArrow}
                 />
                 
@@ -86,51 +89,6 @@ class TransPage extends Component {
             </Container>
         )
     }
-}
-
-const styles = StyleSheet.create({
-    titleText:{
-        fontSize: 36,
-        fontFamily:'PlayfairDisplay-Black',
-        paddingLeft: 20,
-    },
-    searchBg:{
-        backgroundColor: '#e8e8e9',
-        height: 40,
-        borderRadius: 10,
-        marginHorizontal: 20,
-        flexDirection: 'row',
-        marginTop: 17,
-    },
-    searchTextInput:{
-        color: '#8E8E93',
-        opacity: 1,
-        flex:1,
-        fontSize: 17,
-        lineHeight: 17
-    },
-    iconStyle:{
-        fontSize: 20,
-        alignSelf: 'center',
-        marginHorizontal: 20,
-        color: '#8E8E93',
-    },
-    dateView:{
-        height: 42,
-        paddingTop: 15,
-        paddingLeft: 20,
-
-    },
-    dateView2:{
-        height: 42,
-        paddingLeft: 20,
-
-    },
-    dateText:{
-        fontFamily: 'ProximaNova-Regular',
-        color: '#8E8E93',
-        paddingTop: 18,
-    }
-})
+}    
 
 export default TransPage

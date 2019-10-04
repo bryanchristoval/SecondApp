@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
 import { Container, Card } from 'native-base'
-import AppHeader from '../common/header'
+
+import styles  from '../styles/index'
+
 import CalcContainer from '../common/calculator/calcContainer'
 import Carousel from '../common/carousel'
 
@@ -12,7 +14,9 @@ class AddExpense extends Component {
             <Container>
                 <View style={{paddingLeft: 20}}>
                     <View style={styles.topView}>
-                        <Image source={require('../assets/icon/ic_close_black.png')}/>
+                        <TouchableOpacity onPress={() => this.props.navigation.popToTop()}>
+                            <Image source={require('../assets/icon/ic_close_black.png')}/>
+                        </TouchableOpacity>
                         <View style={{paddingLeft: 20}}>
                             <Text style={{fontSize: 13, fontFamily:'ProximaNova-Regular'}}>DATE</Text>
                             <View style={{flexDirection:'row'}}>
@@ -27,14 +31,14 @@ class AddExpense extends Component {
                             horizontal={true}
                             showsHorizontalScrollIndicator={false}
                         >
-                            <Card style={styles.Card1}>
+                            <Card style={styles.bigCarousel1}>
                                 <Text style={styles.cardText1}>Add Expense</Text>
                                 <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
                                     <Text style={styles.cardText2}>Rp</Text>
                                     <Text style={styles.cardText3}>Tap here to add notes</Text>
                                 </View>       
                             </Card>
-                            <Card style={styles.Card2}>
+                            <Card style={styles.bigCarousel2}>
                                 <Text style={styles.cardText1}>Add Income</Text>
                                 <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
                                     <Text style={styles.cardText2}>Rp</Text>
@@ -81,62 +85,5 @@ class AddExpense extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-    topView:{
-        height: 60,
-        paddingTop: 20,
-        flexDirection: 'row',
-    },
-    bottomSwiper:{
-        height: 93,
-        width:93,
-        alignItems: 'center'
-    },
-    calcContainer:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#FFFFFF',
-        margin: 1,
-    },
-    Card1:{
-        height: 270, 
-        width: 335,
-        backgroundColor:"#D44624",
-        borderRadius: 4,
-        marginRight: 15
-        
-    },
-    Card2:{
-        height: 270,
-        width: 335,
-        backgroundColor:"#75D424",
-        borderRadius: 4,
-        
-    },
-    cardText1:{
-        color: 'white',
-        fontSize: 13,
-        paddingLeft: 20,
-        paddingTop: 14,
-        fontFamily: 'ProximaNova-Regular'
-        
-    },
-    cardText2:{
-        color:'#000000',
-        paddingBottom: 6,
-        fontSize: 56,
-        opacity: 0.25,
-        fontFamily: 'ProximaNova-Semibold'
-    },
-    cardText3:{
-        color:'#000000',
-        paddingBottom: 6,
-        fontSize: 17,
-        fontFamily: 'ProximaNova-Regular',
-        opacity: 0.25,
-        
-    },
-})
 
 export default AddExpense

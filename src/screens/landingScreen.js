@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Container } from 'native-base'
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 
 import HomeCard from '../common/homeCard';
 import Carousel from '../common/carousel';
-import AppHeader from '../common/header'
+
+import styles, {colors} from '../styles/index'
 
 
 class LandingPage extends Component {
@@ -81,40 +82,5 @@ class LandingPage extends Component {
         )
     }
 }
-const styles = StyleSheet.create({
-    text1:{
-        fontSize: 13,
-        fontFamily:'ProximaNova-Regular',
-        color: '#8E8E93'
-        
-    },
-    container:{
-        paddingLeft: 20,
-    },
-    
-    header:{
-        marginTop: 26,
-    },
-    header2:{
-    },
-
-
-    Card1:{
-        height: 80,
-        width: 335,
-        backgroundColor:"#D44624",
-        borderRadius: 4,
-        borderBottomWidth: null,
-        
-    },
-    Card2:{
-        height: 80,
-        width: 335,
-        backgroundColor:"#75D424",
-        borderRadius: 4,
-        borderBottomWidth: null,
-        
-    },
-})
 
 export default LandingPage

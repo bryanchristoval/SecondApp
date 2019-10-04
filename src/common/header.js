@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Image } from 'react-native'
+import { Image, TouchableOpacity } from 'react-native'
 import { Header, Left, Body, Right, Button, Title } from 'native-base'
 
 
@@ -8,9 +8,9 @@ class AppHeader extends Component {
         return (
             <Header>
                 <Left>
-                    <Button transparent onPress = {this.props.leftclick}>
+                    <TouchableOpacity transparent onPress = {this.props.leftclick}>
                         <Image source={ this.props.leftbutton }/>
-                    </Button> 
+                    </TouchableOpacity> 
                 </Left>
                 <Body>
                     <Title>
