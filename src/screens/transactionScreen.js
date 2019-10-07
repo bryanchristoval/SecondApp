@@ -20,7 +20,7 @@ class TransPage extends Component {
         return (
             <Container>
                 <AppHeader
-                    leftclick = {() => this.props.navigation.popToTop()}
+                    leftclick = {() => this.props.navigation.goBack()}
                     leftbutton  = {leftArrow}
                 />
                 

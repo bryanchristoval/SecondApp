@@ -10,6 +10,7 @@ export const colors ={
     greyFade: '#E8E8E9'
 };
 
+
 export default StyleSheet.create({
     text1:{
         fontSize: 13,
@@ -44,19 +45,33 @@ export default StyleSheet.create({
 
     Card1:{
         height: 80,
-        width: 335,
         backgroundColor: colors.red,
         borderRadius: 4,
         borderBottomWidth: null,
-        
+        marginHorizontal: 30,
     },
     Card2:{
         height: 80,
-        width: 335,
         backgroundColor: colors.green,
         borderRadius: 4,
         borderBottomWidth: null,
         
+        
+    },
+  
+    cardText1:{
+        color: colors.white,
+        fontSize: 13,
+        paddingLeft: 10,
+        paddingTop: 14,
+    },
+    cardText4:{
+        color:'white',
+        paddingLeft: 150,
+        paddingBottom: 6,
+        fontSize: 34,
+        fontFamily: 'Spectral-Bold'
+
     },
     
 
@@ -157,15 +172,14 @@ export default StyleSheet.create({
 
     bigCarousel1:{
         height: 270, 
-        width: 335,
+        width: 355,
         backgroundColor:"#D44624",
         borderRadius: 4,
-        marginRight: 15
         
     },
     bigCarousel2:{
         height: 270,
-        width: 335,
+        width: 355,
         backgroundColor:"#75D424",
         borderRadius: 4,
         

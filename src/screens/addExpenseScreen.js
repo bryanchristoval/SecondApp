@@ -5,7 +5,7 @@ import { Container, Card } from 'native-base'
 import styles  from '../styles/index'
 
 import CalcContainer from '../common/calculator/calcContainer'
-import Carousel from '../common/carousel'
+import Carousels2 from '../common/carousel2'
 
 
 class AddExpense extends Component {
@@ -27,25 +27,7 @@ class AddExpense extends Component {
                         </View>
                     </View>
                     <View>
-                        <ScrollView
-                            horizontal={true}
-                            showsHorizontalScrollIndicator={false}
-                        >
-                            <Card style={styles.bigCarousel1}>
-                                <Text style={styles.cardText1}>Add Expense</Text>
-                                <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-                                    <Text style={styles.cardText2}>Rp</Text>
-                                    <Text style={styles.cardText3}>Tap here to add notes</Text>
-                                </View>       
-                            </Card>
-                            <Card style={styles.bigCarousel2}>
-                                <Text style={styles.cardText1}>Add Income</Text>
-                                <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-                                    <Text style={styles.cardText2}>Rp</Text>
-                                    <Text style={styles.cardText3}>Tap here to add notes</Text>
-                                </View>       
-                            </Card>
-                        </ScrollView>
+                        <Carousels2/>
                     </View>
                 </View>
                 

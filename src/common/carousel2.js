@@ -9,21 +9,27 @@ import { heightPercentageToDP as hp, widthPercentageToDP as wp} from 'react-nati
 export const sliderW = wp('90%')
 export const itemW = wp('90%')
 
-class Carousels extends Component {
+class Carousels2 extends Component {
     
     _renderItem({item, index}){
         if(index === 0){
             return(
-            <Card style={styles.Card1}>
-                <Text style={styles.cardText1}>Expense</Text>
-                <Text style={styles.cardText4}>20.500.000</Text>
+            <Card style={styles.bigCarousel1}>
+                <Text style={styles.cardText1}>Add Expense</Text>
+                <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+                    <Text style={styles.cardText2}>Rp</Text>
+                    <Text style={styles.cardText3}>Tap here to add notes</Text>
+                </View>       
             </Card>
             )
         }else{
             return(
-                <Card style={styles.Card2}>
-                    <Text style={styles.cardText1}> Income </Text>
-                    <Text style={styles.cardText4}> 0 </Text>
+                <Card style={styles.bigCarousel2}>
+                    <Text style={styles.cardText1}>Add Income</Text>
+                    <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+                        <Text style={styles.cardText2}>Rp</Text>
+                        <Text style={styles.cardText3}>Tap here to add notes</Text>
+                    </View>       
                 </Card>
             )
         } 
@@ -36,9 +42,10 @@ class Carousels extends Component {
                     renderItem={this._renderItem}
                     sliderWidth= {sliderW}
                     itemWidth={itemW}
+                    
                 />
             </View>
         )
     }
 }
-export default Carousels;
+export default Carousels2;

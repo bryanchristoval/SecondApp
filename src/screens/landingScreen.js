@@ -3,7 +3,7 @@ import { Container } from 'native-base'
 import { View, Text, ScrollView } from 'react-native'
 
 import HomeCard from '../common/homeCard';
-import Carousel from '../common/carousel';
+import Carousels from '../common/carousel';
 
 import styles, {colors} from '../styles/index'
 
@@ -26,9 +26,9 @@ class LandingPage extends Component {
                         showsHorizontalScrollIndicator={false}>
                     <View style={styles.container}>
                     <View>
-                        <Carousel/>
+                        <Carousels/>
                     </View>
-                    <View style={{paddingTop: 16}}>
+                    <View style={{paddingTop: 16 }}>
                         <HomeCard
                             leftText= 'TODAY'
                             amount='0'
